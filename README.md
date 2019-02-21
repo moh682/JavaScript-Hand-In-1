@@ -9,8 +9,7 @@ these programming languages.
 |:----------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
 | Java is a Compiled language like C  and Pascal, meaning it need to be  compiled before being able to run. | JavaScript is an interpreted language, because  JavaScript was made for the web, the browsers  interpreter reads the code and execute it. |
 | Java Is a strict typed language  which means you have to specify a  type when declaring a variable/object. | JavaScript is also a Dynamic typed language, meaning you don't need to declare the type when instantiating |
-| Java is also a synchronous, which means that it execute the code line by line. |
-| JavaScript on the other hand is the opposite, which is Asynchronous. This means you will be able to execute lines in parallel. | 
+| Java is also a synchronous, which means that it execute the code line by line. | JavaScript on the other hand is the opposite, which is Asynchronous. This means you will be able to execute lines in parallel. | 
 
 ### Explain the two strategies for improving JavaScript: ES6 (es2015) + ES7, versus Typescript. What does it require to use these technologies: In our backend with Node and in (many different) Browsers. ##
 
