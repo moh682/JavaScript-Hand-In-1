@@ -9,6 +9,8 @@ these programming languages.
 |:----------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
 | Java is a Compiled language like C  and Pascal, meaning it need to be  compiled before being able to run. | JavaScript is an interpreted language, because  JavaScript was made for the web, the browsers  interpreter reads the code and execute it. |
 | Java Is a strict typed language  which means you have to specify a  type when declaring a variable/object. | JavaScript is also a Dynamic typed language, meaning you don't need to declare the type when instantiating |
+| Java is also a synchronous, which means that it execute the code line by line. |
+| JavaScript on the other hand is the opposite, which is Asynchronous. This means you will be able to execute lines in parallel. | 
 
 ### Explain the two strategies for improving JavaScript: ES6 (es2015) + ES7, versus Typescript. What does it require to use these technologies: In our backend with Node and in (many different) Browsers. ##
 
@@ -19,7 +21,7 @@ these programming languages.
 
 Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
 
-###### Some very nice features, that came with ES6 and compare it with ES5
+###### Useful features, that came with ES6 and compare it with ES5
 
 This is how the code would look like, if you wanted to have a default value for the arguments.
 ```
@@ -34,6 +36,11 @@ var getAccounts = function(limit = 10) {
   ...
 }
 ```    
+###### Important features for developers in es2016+:
+
+The huge game changer for language is the "async" function. By just adding "async" in front of a function, you can make the code act in a synchronous flow. The exact opposite of what we were used to previously, as JavaScript being an asynchronous language. 
+
+
 
 
 ### Explain generally about node.js, when it “makes sense” and npm, and how it “fits” into the node echo system.##
