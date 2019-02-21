@@ -68,7 +68,14 @@ This is how you could use the async feature, to make your code synchronous.
 
 ##### TypeScript
 
-Now that we have talked about some the features given to us by ES6(es2015) and ES7. some features are not supported in some platforms. This mean the features are not compatible in some platforms, alleviating programmers performance. 
+Now that we have talked about some the features given to us by ES6(es2015) and ES7. some features are not supported in some browsers. This mean the features are not compatible in some browsers, alleviating programmers performance. There are also moment when the program you are building need a strict typed language and don't want to learn a new language. 
+
+TypeScript solves all of the above. 
+
+* A free open source language, developed and maintained by Microsoft. It is a strict superset of JavaScript, and adds optional static typing and many of the features from es2015 and es2016.
+* Can be used in all browsers when compiled into ES5.
+* Can be used with NodeJS with a typescript compiler, which would be node.js or git.
+* Can be used in both Angular and React.
 
 ### Explain generally about node.js, when it “makes sense” and npm, and how it “fits” into the node echo system.##
 
