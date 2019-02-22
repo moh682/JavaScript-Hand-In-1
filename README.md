@@ -114,6 +114,8 @@ The event loop is explained in java through the stack, which explain when each e
 
 Languages like Java is a blocking language which mean when the method runs, it stops until the current code is executed, then jumps to the next, and that is the complete different of what JavaScript does. 
 
+The Event Loop in JavaScript is explained [here](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
 ## Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises. ##
 
 ## Explain the purpose of “use strict” and Linters, exemplified with ESLint. ##
