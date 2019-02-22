@@ -110,12 +110,9 @@ It uses an event-driven, non-blocking I/O model that makes it lightweight and ef
 
 ## Explain about the Event Loop in Node.js. ##
 
-	The event loop is explained in java through the stack, which explain when each expression is called. 
-		it explains why javascript is non-blocking and will just skip to the next method. and thats 
-		why we have the callback issues. 
+The event loop is explained in java through the stack, which explain when each expression is called. it explains why javascript is non-blocking and will just skip to the next method. and thats why we have the callback issues. 
 
-	Languages like Java is a blocking language which mean when the method runs, it stops until the current
-		code is executed, then jumps to the next, and that is the complete different of what JavaScript does. 
+Languages like Java is a blocking language which mean when the method runs, it stops until the current code is executed, then jumps to the next, and that is the complete different of what JavaScript does. 
 
 ## Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises. ##
 
