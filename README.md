@@ -114,7 +114,77 @@ The event loop is explained in java through the stack, which explain when each e
 
 Languages like Java is a blocking language which mean when the method runs, it stops until the current code is executed, then jumps to the next, and that is the complete different of what JavaScript does. 
 
-The Event Loop in JavaScript is explained [here](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+**The Event Loop in JavaScript is explained [here](https://www.youtube.com/watch?v=8aGhZQkoFbQ), in this youtube video!** 
+
+## Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises
+
+- Babel is essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
+
+- Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.good Webpack notes<br/>
+- Bundles ES Modules, CommonJS and AMD modules (even combined).
+- Can create a single bundle or multiple chunks that are asynchronously loaded at runtime (to reduce initial loading time).
+- Dependencies are resolved during compilation, reducing the runtime size.
+- Loaders can preprocess files while compiling, e.g. TypeScript to JavaScript, Handlebars strings to compiled functions, images to Base64, etc.
+- Highly modular plugin system to do whatever else your application requires.
+- we bundle all files into one big file (or a couple files) in order to reduce the number of requests. 
+Another common approach to speed up the bundling operation is to “minify” the bundled code. 
+Minification is the process of removing unnecessary characters from source code (those only meant for humans).
+
+### Examples
+index.html<br />
+show our html code with javascript support.
+```javascript
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Getting Started with Webpack</title>
+</head>
+<body>
+    <h1>WebPack is fun</h1>
+    <div id="my-table"></div>
+    <script src="bundle.js"></script>
+</body>
+</html>
+```
+main.js<br />
+our javascript code.
+```javascript
+require('./main.css');
+const name = 'Scotch.io';
+setTimeout(() => console.log(`Hello there from ${name}`), 300);
+```
+Webpack.config.js<br />
+This file exports our project's webpack configuration object.
+```javascript
+module.exports = {
+    entry: './main.js',
+    output: {
+        filename: './bundle.js'
+    },
+    watch: true,
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015']
+                }
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+                loader: "file-loader"
+            }
+        ],
+    }
+};
+```
 
 ## Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises. ##
 
