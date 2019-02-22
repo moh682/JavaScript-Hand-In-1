@@ -114,6 +114,19 @@ The event loop is explained in java through the stack, which explain when each e
 
 Languages like Java is a blocking language which mean when the method runs, it stops until the current code is executed, then jumps to the next, and that is the complete different of what JavaScript does. 
 
+### Call Stack:
+Runs first, these are the executed calls from javascript.
+ 
+### WebApi's:
+These run and are send away to the browser and to different threads, they complete separately and then when they are finished the go to the task queue.
+ 
+### Task Queue:
+Holds the finished webapi processes then when the call stack is empty, it sends them to the call stack again.
+
+### Figure showing the event loop:
+
+<img src="https://cdn-images-1.medium.com/max/1600/1*FA9NGxNB6-v1oI2qGEtlRQ.png" width="500">
+
 **The Event Loop in JavaScript is explained [here](https://www.youtube.com/watch?v=8aGhZQkoFbQ), in this youtube video!** 
 
 ## Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises
@@ -186,6 +199,29 @@ module.exports = {
 };
 ```
 
-## Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises. ##
+## Explain (some) of the purposes with the tools Babel and WebPack, using examples from the exercises. ##
+
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments
+
+### What can babel do for you? 
+
+* Transform syntax
+* Plyfill features that are missing in you target environment. 
+* Source code Transformation
+
+### Babel Examples
+
+```javascript
+[1, 2, 3].map(n => n ** 2);
+```
+Arrow functions are not supported in every browser on the internet. By using babel the code above, would be converted to browser-compatible JavaScript, as below. 
+
+```javascript
+[1,2,3].map(function (n) {
+  return Math.pow(n, 2);
+});
+```
+
+
 
 ## Explain the purpose of “use strict” and Linters, exemplified with ESLint. ##
