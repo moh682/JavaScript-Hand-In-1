@@ -22,7 +22,7 @@ Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you t
 
 ### Useful features, that came with ES6 and compare it with ES5: #
 
-This is how the code would look like, if you wanted to have a default value for the arguments.
+This is how the code would look like, if you wanted to have a default value for the arguments. 
 ```javascript
 var getAccounts = function(limit) {
   var limit = limit || 10
@@ -133,13 +133,13 @@ Holds the finished webapi processes then when the call stack is empty, it sends 
 
 - Babel is essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
 
-- Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.good Webpack notes<br/>
-- Bundles ES Modules, CommonJS and AMD modules (even combined).
-- Can create a single bundle or multiple chunks that are asynchronously loaded at runtime (to reduce initial loading time).
-- Dependencies are resolved during compilation, reducing the runtime size.
-- Loaders can preprocess files while compiling, e.g. TypeScript to JavaScript, Handlebars strings to compiled functions, images to Base64, etc.
-- Highly modular plugin system to do whatever else your application requires.
-- we bundle all files into one big file (or a couple files) in order to reduce the number of requests. 
+* Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.good Webpack notes<br/>
+* Bundles ES Modules, CommonJS and AMD modules (even combined).
+* Can create a single bundle or multiple chunks that are asynchronously loaded at runtime (to reduce initial loading time).
+* Dependencies are resolved during compilation, reducing the runtime size.
+* Loaders can preprocess files while compiling, e.g. TypeScript to JavaScript, Handlebars strings to compiled functions, images to Base64, etc.
+* Highly modular plugin system to do whatever else your application requires.
+* we bundle all files into one big file (or a couple files) in order to reduce the number of requests. 
 Another common approach to speed up the bundling operation is to “minify” the bundled code. 
 Minification is the process of removing unnecessary characters from source code (those only meant for humans).
 
@@ -209,7 +209,7 @@ Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a
 * Plyfill features that are missing in you target environment. 
 * Source code Transformation
 
-### Babel Examples
+### Babel Example
 
 ```javascript
 [1, 2, 3].map(n => n ** 2);
@@ -222,6 +222,37 @@ Arrow functions are not supported in every browser on the internet. By using bab
 });
 ```
 
+### What is Module Bundling and why bother?
 
+On a high level, module bundling is simply the process of stitching together a group of modules (and their dependencies) into a single file(or group of files) in the correct order.
+
+#### Why Bundle files?
+
+When you divide your program into modules, you typically organize those modules into different files and folders (think React Components).
+As a result, each of those files has to be included in your main HTML file in a <script> tag, which is then loaded by the browser when a user visits your home page.
+Having separate <script> tags for each file means that the browser has to load each file individually:
+  →This has a cost in terms of page load time.
+
+To get around this problem, we bundle all files into one big file (or a couple files) in order to reduce the number of requests. 
+Another common approach to speed up the bundling operation is to “minify” the bundled code. 
+Minification is the process of removing unnecessary characters from source code (those only meant for humans).
+
+#### Example of Bundles in real world.
+
+#####Rarely seen
+* **CommonJS**
+One part of CommonJS is the Module specification. Node.js is a server-side JavaScript runtimes that implement modules based on the CommonJS Module specification
+* **Asynchronous module definition (AMD)** 
+ AMD is another specification for modules. RequireJS is probably the most popular implementation of AMD. One major difference from CommonJS is that AMD specifies that modules are loaded asynchronously.
+
+#####More common 
+* **Native JS (es2015)**
+ECMAScript2015 and forward has native support for Modules.
+Exporting/importing values from/to modules without global namespace pollution
+* **WebPack**
+WebPack is built, from the ground up, to help you manage static assets for the front-end
+
+
+ * **Asynchronous module definition (AMD)**
 
 ## Explain the purpose of “use strict” and Linters, exemplified with ESLint. ##
