@@ -239,20 +239,20 @@ Minification is the process of removing unnecessary characters from source code 
 
 #### Example of Bundles in real world.
 
-##### Rarely seen
+##### Less Common
 * **CommonJS**
 One part of CommonJS is the Module specification. Node.js is a server-side JavaScript runtimes that implement modules based on the CommonJS Module specification
 * **Asynchronous module definition (AMD)** 
  AMD is another specification for modules. RequireJS is probably the most popular implementation of AMD. One major difference from CommonJS is that AMD specifies that modules are loaded asynchronously.
 
-##### More common 
+##### More Frequent 
 * **Native JS (es2015)**
 ECMAScript2015 and forward has native support for Modules.
 Exporting/importing values from/to modules without global namespace pollution
 * **WebPack**
 WebPack is built, from the ground up, to help you manage static assets for the front-end
 
-
- * **Asynchronous module definition (AMD)**
+### Why WebPack?
+* 
 
 ## Explain the purpose of “use strict” and Linters, exemplified with ESLint. ##
