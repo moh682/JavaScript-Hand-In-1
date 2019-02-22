@@ -629,7 +629,7 @@ Here you use the reusable module in main.js
 - let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
 - Variables declared by let have as their scope the block in which they are defined, as well as in any contained sub-blocks . In this way, let works very much like var. The main difference is that the scope of a var variable is the entire enclosing function.<br /><br />
 Example on let compared to var:
-```
+```javascript
 function varTest() {
   var x = 1;
   if (true) {
@@ -650,7 +650,7 @@ function letTest() {
 ### Arrow functions
 - An arrow function expression has a shorter syntax than a function expression and does not bind its own this, arguments, super, or new.target. Arrow functions are always anonymous. These function expressions are best suited for non-method functions, and they cannot be used as constructors.<br /><br />
 Example on an arrow function being able to shorten the function, which is very handy:
-```
+```javascript
 var materials = [
   'Hydrogen',
   'Helium',
@@ -681,7 +681,7 @@ console.log(window.a); // 37
 - in a function context, the value of this depends on how the function is called.<br />
 
 Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object:
-```
+```javascript
 function f1() {
   return this;
 }
@@ -691,7 +691,7 @@ f1() === window; // the window is the global object in browsers
 f1() === global;
 ```
 In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, so, in the following case, this will default to undefined:
-```
+```javascript
 function f2() {
   'use strict'; // see strict mode
   return this;
@@ -705,7 +705,7 @@ So, in strict mode, if this was not defined by the execution context, it remains
 - If the last named argument of a function is prefixed with ..., it becomes an array whose elements from 0 (inclusive) to theArgs.length (exclusive) are supplied by the actual arguments passed to the function.<br />
 
 Example:
-```
+```javascript
 // Before rest parameters, the following could be found:
 function f(a, b) {
   var args = Array.prototype.slice.call(arguments, f.length);
@@ -722,14 +722,14 @@ Simply sets the argument array at the end.
 - The destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects into distinct variables.<br />
 
 Example, destructuring of data from a list:
-```
+```javascript
 var x = [1, 2, 3, 4, 5];
 var [y, z] = x;
 console.log(y); // 1
 console.log(z); // 2
 ```
 Example, destructuring of data from an array:
-```
+```javascript
 var foo = ['one', 'two', 'three'];
 var [one, two, three] = foo;
 console.log(one); // "one"
@@ -743,7 +743,7 @@ console.log(three); // "three"
 - It should be noted that a Map that is a map of an object, especially a dictionary of dictionaries, will only map to the object's insertion order -- which is random and not ordered.<br />
 
 Example, using the map object:
-```
+```javascript
 var myMap = new Map();
 var keyString = 'a string',
     keyObj = {},
@@ -773,7 +773,7 @@ myMap.get(function() {}) // undefined, because keyFunc !== function () {}
 - ES6 uses both commonjs and AMD<br />
 Es2015 module import and export example:<br />
 Export.
-```
+```javascript
 //------ lib.js ------
     export const sqrt = Math.sqrt;
     export function square(x) {
@@ -784,7 +784,7 @@ Export.
     }
 ```
 Import.
-```
+```javascript
 //------ main.js ------
     import { square, diag } from 'lib';
     console.log(square(11)); // 121
@@ -797,7 +797,7 @@ Import.
 - OO keywords is probably the most awaited features in ES6. Classes are something like another syntactic sugar over the prototype-based OO pattern. We now have one, concise way to make class patterns easier to use.<br/>
 ES6 inheritance example:<br />
 Class definition.
-```
+```javascript
 class Shape {
     constructor (id, x, y) {
         this.id = id
@@ -810,7 +810,7 @@ class Shape {
 }
 ```
 Class inheritance.
-```
+```javascript
 class Rectangle extends Shape {
     constructor (id, x, y, width, height) {
         super(id, x, y)
@@ -835,7 +835,7 @@ Video talking about es-next features:
 
 ### Es-next Examples:
 Legacy JavaScript
-```
+```javascript
 var memoize = require('lodash').memoize;
 
 var upperCase = memoize(function(string) {
@@ -845,7 +845,7 @@ var upperCase = memoize(function(string) {
 Converted Es-next JavaScript:
 
 Now we can just write import and we can shorten our function into an arrow function
-```
+```javascript
 import { memoize } from 'lodash';
 
 const upperCase = memoize(string => string.toUpperCase());
@@ -857,20 +857,20 @@ Shorter code that is more understandable.
 
 ### Class:
 
-```
+```javascript
 class Shape {
 ```
 
 ### Types
 
-```
+```javascript
 color: string;
 area: number;
 ```
 
 ### Interface
 
-```
+```javascript
 interface IBook {
     title: string;
     readonly author: string;
@@ -916,7 +916,7 @@ https://www.youtube.com/watch?v=PoRJizFvM7s
 
 ## Examples of the Pyramid of Doom
 Avoiding the callback hell/pyramid of doom, is by using Promises or async await.
-```
+```javascript
 async1(function(){
     async2(function(){
         async3(function(){
@@ -932,7 +932,7 @@ async1(function(){
 <img src="https://cdn-images-1.medium.com/max/1600/1*mL04Mh-tDosU6_OlqexwyQ.jpeg" width="500">
 
 ## Example of how to fix/prevent the callback hell/pyramid of hell
-```
+```javascript
 async1()
   .then(async2).
   .then(async3).
