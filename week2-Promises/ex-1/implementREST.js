@@ -8,6 +8,5 @@ function addRandoms(array){
       randoms.push({ "length" : array[index] , "randoms": promise.makeSecureRandom(array[index])});
   }
   console.log(randoms);
-}
 
 addRandoms(args);
